@@ -1,0 +1,348 @@
+body {
+    font-family: fantasy, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 80px;
+}
+
+body::-webkit-scrollbar {
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 12px;
+    border-radius: 0;
+  }
+
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+body::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+}
+  
+
+header {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#navmenu {
+    color: white;
+    text-align: center;
+    letter-spacing: 7px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login h1{
+    color: white;
+    align-items: center;
+}
+
+#login img {
+    padding-left: 12px;
+    width: 96px;
+}
+
+
+#discord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+    transition: color 2s ease;
+    transition: background-color 2s ease;
+
+    cursor: pointer;
+    
+}
+
+#discord h1:hover {
+    transition: color 0.5s ease;
+    color: #5662F6;
+    background-color: #2E3035;
+    border-color: #5662F6;
+    animation: FloatIcon ease-in-out 2s infinite;
+}
+
+#discord h1 {
+    transition: border-radius 0.5s;
+    width: 249px;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    border-style: none;
+    border-radius: 15px;
+    padding-right: 12px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#discord h1 img {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 84px;
+    height: 84px;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 50px;
+
+}
+
+#banner #iconanimated {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+
+    animation: FloatIcon 2s ease-in-out infinite;
+}
+
+#banner #iconshadow {
+    filter: blur(2px);
+    rotate: 180deg;
+    
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    padding-bottom: 180px;
+    animation: FloatIcon 2s  infinite;
+
+}
+
+.letrabanner {
+    width: 250px;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 500px;
+    height: 80px;
+    color: white;
+    background-color: black;
+    font-size: 26px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: right;
+}
+
+#social {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+}
+
+.rede {
+    width: 50px;
+    padding-right: 22px;
+    cursor: pointer;
+}
+
+.rede:hover {
+    animation: PopAction 1s ease;
+}
+
+.rede img {
+    width: 50px;
+}
+
+.elementos {
+    height: 100%;
+    width: 100%;
+}
+
+.pageTitle {
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.pageTitle h1 {
+    padding-top: 90px;
+    font-weight: 1;
+    font-size: 33px;
+    text-shadow: 1px 0px 2px black;
+    padding-bottom: 30px;
+}
+
+/* Animação */
+@keyframes FloatIcon {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes PopAction {
+    0% {
+        scale: 1;
+        rotate: 0deg;
+    }
+    25% {
+        scale: 1.2;
+        rotate: 15deg;
+    }
+    50% {
+        rotate: -15deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+/* Media query */
+
+@media (max-width: 1360px) {
+    #footer {
+        height: 61px;
+    }
+
+    .rede img {
+        width: 36px;
+    }
+
+    #conteudo {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #footer {
+        height: 50px;
+    }
+
+    .rede {
+        padding-right: 2px;;
+    }
+    .rede img {
+        width: 30px;
+    }
+
+    .letrabanner {
+        display: none;
+    }
+
+    #login img{
+        display: none;
+    }
+    #login h1{
+        display: contents;
+    }
+
+    #discord  h1{
+        display: flex;
+        width: 100%;
+    }
+    
+    #conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 720px) {
+
+    header {
+        position: relative;
+        margin: 0;
+        height: 500px;
+    }
+
+    .letrabanner{
+        visibility: hidden;
+    }
+
+
+
+    #navmenu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner{
+        padding-right: 40px;
+        padding-bottom: 70px;
+        width: 200px;
+        height: 100%;
+        order: 4;
+    }
+
+    #discord{
+        width: 300px;
+        align-items: center;
+        order: 2;
+    }
+
+    #discord h1 {
+        width: 100%;
+        display: flex;
+    }
+
+    #discord a{
+        visibility: hidden;
+    }
+
+    #login {
+
+        order: 3;
+        text-align: center;
+    }
+
+    #login h1{
+        display: none;
+    }
+
+    #login img {
+        padding: 25px;
+        display: flex;
+    }
+
+
+
+}

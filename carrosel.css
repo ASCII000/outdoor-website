@@ -1,0 +1,167 @@
+.carousel-container {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    flex-basis: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+.carousel-slide {
+    margin-right: 12px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: black;
+    width: 50%;
+    color: white;
+    text-align: center;
+    filter: blur(0px);
+    transition: blur 2s ease-in-out;
+    text-shadow: 2px 2px 12px black;
+}
+/**/
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(12px);
+    z-index: -1;
+}
+
+.carousel-slide:hover .background{
+    filter: blur(0px);
+    transition: blur 2s ease-in-out;
+}
+
+.carousel-slide:nth-child(1) .background{
+    background-image: url('img/hollow-knight.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-slide:nth-child(2) .background{
+    background-image: url('img/nightmares.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-slide:nth-child(3) .background{
+    background-image: url('img/lol.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-slide:nth-child(4) .background{
+    background-image: url('img/amoung.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-slide:nth-child(5) .background{
+    background-image: url('img/dont-starve.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-slide:nth-child(6) .background{
+    background-image: url('img/ahattime.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-slide {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-slide:hover .back-slide{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.205);
+    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.postagem {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow: hidden;
+}
+
+.carousel-slide:hover h1 {
+    transition: padding-top 0.3s ease-out;
+    padding-top: 0%;
+}
+
+.carousel-slide h1 {
+    transition: padding-top 0.3s ease-in;
+    padding-top: 20%;
+    text-align: center;
+    letter-spacing: 12px;
+}
+
+.carousel-slide p {
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.carousel-control {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background-color: black;
+    opacity: 20%;
+    border-radius: 50%;
+    background-size: 100px 200px;
+    height: 200px;
+}
+
+.carousel-control:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.carousel-control.left {
+    left: 22px;
+    background-image: url('img/seta-esquerda.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control.right {
+
+    right: 22px;
+    background-image: url('img/seta-direita.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1360px) {
+    .carousel-control {
+        background-size: 100px 200px;
+        height: 100px;
+        width: 100px;
+    }
+}
