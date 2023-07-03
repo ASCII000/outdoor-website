@@ -5,4 +5,4 @@ projeto pessoal.
 # Objetivo
 O objetivo do site é contar com postagens da comunidade, calendário de notícias com integração via Python Flask.
 
-Acesse o site  aqui [OutDoor Home]https://ascii000.github.io/outdoor-website/main.html
+Acesse o site  aqui [OutDoor Home](https://ascii000.github.io/outdoor-website/main.html)
