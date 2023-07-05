@@ -202,6 +202,22 @@ header {
     text-shadow: 1px 0px 2px black;
     padding-bottom: 30px;
 }
+.calendario-wrapper {
+    display: flex;
+    height: 500px;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+}
+#calendario {
+    display: flex;
+    flex-wrap: 1;
+    flex-grow: 0;
+    flex-basis: 400px;
+    width: 90%;
+    height: 400px;
+    background-color: red;
+}
 
 /* Animação */
 @keyframes FloatIcon {
@@ -295,8 +311,6 @@ header {
     .letrabanner{
         visibility: hidden;
     }
-
-
 
     #navmenu {
         display: flex;
