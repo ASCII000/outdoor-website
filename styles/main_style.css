@@ -90,9 +90,9 @@ nav img {
     width: 10%;
     rotate: 180deg;
     filter: blur(2px);
-    padding-bottom: 280px;
+    padding-bottom: 20%;
 
-    animation: floatAction 2s ease-in-out infinite;
+    animation: floatAction 2s infinite;
 }
 
 /*      LOGIN */
